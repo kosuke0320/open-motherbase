@@ -1,7 +1,14 @@
+# Quick start
+- clone this repository
+```
+git clone https://github.com/YsuOS/open-motherbase.git
+```
+- just do it! Good luck!
+
 # befor start development for beginner
 - You can go to training directory and read `example.txt`.
 - try training following the file.
-  - This training is a simple git training.
+  - This is a simple git training.
 - If you find some other mistakes, for example, typo, bad grammar and etc, Please also fix. Thank you! 
 
 # How to start development
