@@ -1,0 +1,7 @@
+FROM centos
+
+RUN dnf update -y
+RUN dnf install -y httpd ruby 
+RUN gem install sinatra haml
+WORKDIR /home
+CMD ["/home/main.rb", "-o", "0.0.0.0"]

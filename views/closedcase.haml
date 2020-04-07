@@ -1,0 +1,8 @@
+!!!
+%html
+  %head
+    %title Performance Summary
+  %body
+    %h1 Performance Summary
+    - @csv.each do |d|
+      %p #{d[0]} #{d[1]}

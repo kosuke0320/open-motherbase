@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title #{@name}
+    %script{ src: "/clipboard.min.js" }
+  %body
+    %script 
+      new ClipboardJS('.btn')
+    %h1 #{@name}
+    - @ary.each do |ary|
+      %h2 #{ary[1]}
+      %pre{ id: "#{ary[0].chomp(rs='')}" }
+        #{ary[2]}
+      %button{ class: 'btn', 'data-clipboard-target' => "##{ary[0].chomp(rs='')}" }copy 
