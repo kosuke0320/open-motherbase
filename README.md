@@ -2,6 +2,7 @@
 - You can go to training directory and read `example.txt`.
 - try training following the file.
   - This training is a simple git training.
+- If you find some other mistakes, for example, typo, bad grammar and etc, Please also fix. Thank you! 
 
 # How to start development
 1. build development enviroment
