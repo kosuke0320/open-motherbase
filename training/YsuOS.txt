@@ -4,7 +4,7 @@
 1. copy this file and create a new file named "<your github account name>.txt" under this training directory.
   - ex.) YsuOS.txt
 2. find all upcase "IS" and fix to downcase "is".
-3. commit and push to training branch!
+3. commit and push to master branch!
 
 ----------
 
