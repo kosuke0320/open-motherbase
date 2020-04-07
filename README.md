@@ -1,4 +1,9 @@
-# How to start to development
+# befor start development for beginner
+- You can go to training directory and read `example.txt`.
+- try training following the file.
+  - This training is a simple git training.
+
+# How to start development
 1. build development enviroment
   - you can execute below command only one time at the first time
 ```
