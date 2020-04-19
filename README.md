@@ -1,3 +1,11 @@
+# Requirements
+- git
+- docker
+
+## git
+- I highly recommend to use git by CLI
+  - For windows user : [git for windows](https://gitforwindows.org/)
+
 # Quick start
 - clone this repository
 ```
@@ -12,7 +20,15 @@ git clone https://github.com/YsuOS/open-motherbase.git
 - If you find some other mistakes, for example, typo, bad grammar and etc, Please also fix. Thank you! 
 
 # How to start development
-1. build development enviroment
+1. move to open-motherbase directory in terminal
+```
+cd <open-motherbase's directory path you cloned>
+for example:
+    cd ~/Desktop/open-motherbase
+```
+- To confirm where you are, you can just type `pwd`.
+
+2. build development enviroment
   - you can execute below command only one time at the first time
 ```
 docker build -f Dockerfile.dev -t open-motherbase .
