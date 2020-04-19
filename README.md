@@ -5,6 +5,7 @@
 ## git
 - I highly recommend to use git by CLI
   - For windows user : [git for windows](https://gitforwindows.org/)
+  - For mac user : git command has already installed by default. you just open Terminal.app
 
 # Quick start
 - clone this repository
