@@ -1,4 +1,4 @@
-FROM centos
+FROM fedora
 
 RUN dnf update -y
 RUN dnf install -y httpd ruby 
