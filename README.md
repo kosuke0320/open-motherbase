@@ -38,7 +38,7 @@ docker build -f Dockerfile.dev -t open-motherbase .
 ```
 docker run -d -p 8080:8080 --rm --privileged -v ${PWD}:/home --name open-motherbase open-motherbase
 ```
-3. access to http://localhost:4567
+3. access to http://localhost:8080
 
 # docker tips
 - to stop docker container
