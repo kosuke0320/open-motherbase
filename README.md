@@ -36,7 +36,7 @@ docker build -f Dockerfile.dev -t open-motherbase .
 ```
 2. start container
 ```
-docker run -d -p 4567:4567 --rm --privileged -v ${PWD}:/home --name open-motherbase open-motherbase
+docker run -d -p 8080:8080 --rm --privileged -v ${PWD}:/home --name open-motherbase open-motherbase
 ```
 3. access to http://localhost:4567
 
