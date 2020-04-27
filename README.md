@@ -21,6 +21,7 @@ git clone https://github.com/YsuOS/open-motherbase.git
 - If you find some other mistakes, for example, typo, bad grammar and etc, Please also fix. Thank you! 
 
 # How to start development
+## set up a development environment
 1. move to open-motherbase directory in terminal
 ```
 cd <open-motherbase's directory path you cloned>
@@ -39,6 +40,14 @@ docker build -f Dockerfile.dev -t open-motherbase .
 docker run -d -p 4567:4567 --rm --privileged -v ${PWD}:/home --name open-motherbase open-motherbase
 ```
 3. access to http://localhost:8080
+
+## github
+1. go to "Projects" tab in Github and pick up a new task you want to develop
+2. move the task you picked up to "In progress" column from "To do" column
+3. please do the task!
+4. after finish your task, send pull requests on the issue task
+5. brush up and administrator will merge the request
+6. well done! go to 1. again!
 
 # docker tips
 - to stop docker container
