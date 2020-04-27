@@ -45,7 +45,8 @@ docker run -d -p 4567:4567 --rm --privileged -v ${PWD}:/home --name open-motherb
 1. go to "Projects" tab in Github and pick up a new task you want to develop
 2. move the task you picked up to "In progress" column from "To do" column
 3. please do the task!
-4. after finish your task, send pull requests on the issue task
+4. after finish your task, send pull requests
+5. link the pull request to related issue task
 5. brush up and administrator will merge the request
 6. well done! go to 1. again!
 
