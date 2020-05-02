@@ -1,0 +1,13 @@
+<!DOCTIPE html>
+<html>
+<!-- first page -->
+<body>
+<h1>1. Are you a man or woman?</h1>
+
+<button onclick="./second">man</button>
+
+<button onclick="./second">woman</button>
+
+</body>
+
+</html>

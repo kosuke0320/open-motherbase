@@ -1,0 +1,15 @@
+<!DOCTIPE html>
+
+<html>
+<!--second page-->
+
+<body>
+<h1>Do you workout?</h1>
+
+<button onclick="thrid page's url">yes</button>
+
+<button onclick="thrid page's url">no</button>
+
+</body>
+
+</html>
