@@ -7,15 +7,14 @@
     %h2 Copy and Paste
     - @cnp.each do |cnp|
       %a{ href: "cnp/#{cnp}" } #{cnp}
-    %h2 Tools
-    - @tools.each do |tool|
-      %a{ href: "#{tool}" } #{tool}
+    %h2 Operations
+    - @operations.each do |operations|
+      %a{ href: "#{operations}" } #{operations}
     %h2 VMCORE ANALYSIS
     - @vmcores.each do |vmcore|
       %a{ href: "vmcores/#{vmcore}" } #{vmcore}
     %h2 Technical Memo(no internal)
-    %a{ href: "https://www.dropbox.com/home" } link to my dropbox 
+    %a{ href: "https://www.dropbox.com/home" } link to my dropbox
     %h2 Temporary Memo
     %pre
       #{@memo}
-
