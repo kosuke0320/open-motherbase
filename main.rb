@@ -38,7 +38,7 @@ get '/cnp/:name' do
       @ary.push(tmp)
     }
   }
-  haml :tools
+  haml :operations
 end
 
 # tools
@@ -48,7 +48,7 @@ get '/:name' do
     @csv = CSV.read("#{DATAS}/closedcase", headers: false)
     haml :closedcase
   else
-    @article = read_article("tools", @name)
+    @internal = read_internal("operations", @name)
     haml :default
   end
 end
