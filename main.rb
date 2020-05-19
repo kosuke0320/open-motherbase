@@ -7,14 +7,14 @@ require './helper.rb'
 
 
 # read article
-def read_article(subdir, name) 
+def read_article(subdir, name)
     return File.read("#{ARTICLE}/#{subdir}/#{name}")
 end
 
 get '/' do
 
   @cnp = ls("#{ARTICLE}/cnp/")
-  @tools = ls("#{ARTICLE}/tools/") + ls("#{DATAS}")
+  @operations = ls("#{ARTICLE}/operations/") + ls("#{DATAS}")
   @vmcores = ls("#{ARTICLE}/vmcores/")
   @memo = read_article("memo", "memo")
 
@@ -27,7 +27,7 @@ get '/cnp/:name' do
   @name = params['name']
   content = "==========\n"
   paragraph = "----------\n"
-  
+
   @ary = Array.new
   File.open("#{ARTICLE}/cnp/#{@name}"){|f|
     f.each_line(rs=content){|cont|
@@ -56,6 +56,6 @@ end
 get '/vmcores/:name' do
   @name = params['name']
   @article = read_article("vmcores", @name)
-  
+
   haml :default
 end
