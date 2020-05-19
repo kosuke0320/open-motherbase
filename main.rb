@@ -7,14 +7,14 @@ require './helper.rb'
 
 
 # read article
-def read_article(subdir, name)
-    return File.read("#{ARTICLE}/#{subdir}/#{name}")
+def read_internal(subdir, name)
+    return File.read("#{INTERNAL}/#{subdir}/#{name}")
 end
 
 get '/' do
 
   @cnp = ls("#{ARTICLE}/cnp/")
-  @operations = ls("#{ARTICLE}/operations/") + ls("#{DATAS}")
+  @operations = ls("#{INTERNAL}/operations/") + ls("#{DATAS}")
   @vmcores = ls("#{ARTICLE}/vmcores/")
   @memo = read_article("memo", "memo")
 
