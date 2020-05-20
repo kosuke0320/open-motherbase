@@ -17,8 +17,8 @@ class MyTest < Minitest::Test
     get '/'
     assert last_response.ok?
 
-    tools = ls("#{ARTICLE}/tools/") + ls("#{DATAS}")
-    tools.each {|x|
+    operations = ls("#{INTERNAL}/operations/") + ls("#{DATAS}")
+    operations.each {|x|
       get "/#{x}"
       assert last_response.ok?
     }
