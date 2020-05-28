@@ -9,15 +9,14 @@ require './helper.rb'
 # read article
 def read_internal(subdir, name)
     return File.read("#{INTERNAL}/#{subdir}/#{name}")
-    return File.read("#{ARTICLE}/#{subdir}/#{name}")
 end
 
 get '/' do
 
-  @cnp = ls("#{ARTICLE}/cnp/")
+  @cnp = ls("#{INTERNAL}/#{ARTICLE}/cnp/")
   @operations = ls("#{INTERNAL}/operations/") + ls("#{DATAS}")
-  @vmcores = ls("#{ARTICLE}/vmcores/")
-  @memo = read_internal("#{ARTICLE}/memo/")
+  @vmcores = ls("#{INTERNAL}/#{ARTICLE}/vmcores/")
+  @memo = read_internal("#{INTERNAL}/#{ARTICLE}/memo/")
 
 
   haml :index
