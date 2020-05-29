@@ -8,7 +8,7 @@ require './helper.rb'
 
 # read article
 def read_internal(subdir, name)
-    return File.read("#{INTERNAL}/#{subdir}/#{name}")
+    return File.read("#{subdir}/#{name}")
 end
 
 get '/' do
