@@ -8,7 +8,7 @@ require './helper.rb'
 
 # read article
 def read_internal(subdir, name)
-    return File.read("#{subdir}/#{name}")
+    return File.read("#{INTERNAL}/#{subdir}/#{name}")
 end
 
 get '/' do
@@ -55,7 +55,7 @@ end
 
 get '/vmcores/:name' do
   @name = params['name']
-  @article = read_article("vmcores", @name)
+  @internal = read_internal("vmcores", @name)
 
   haml :default
 end
