@@ -13,10 +13,10 @@ end
 
 get '/' do
 
-  @cnp = ls("#{INTERNAL}/#{ARTICLE}/cnp/")
+  @cnp = ls("#{INTERNAL}/cnp/")
   @operations = ls("#{INTERNAL}/operations/") + ls("#{DATAS}")
-  @vmcores = ls("#{INTERNAL}/#{ARTICLE}/vmcores/")
-  @memo = read_internal("#{INTERNAL}/#{ARTICLE}/memo/")
+  @vmcores = ls("#{INTERNAL}/vmcores/")
+  @memo = read_internal("#{INTERNAL}/memo/")
 
 
   haml :index
@@ -29,7 +29,7 @@ get '/cnp/:name' do
   paragraph = "----------\n"
 
   @ary = Array.new
-  File.open("#{ARTICLE}/cnp/#{@name}"){|f|
+  File.open("#{INTERNAL}/cnp/#{@name}"){|f|
     f.each_line(rs=content){|cont|
       tmp = Array.new
       cont.chomp(rs=content).each_line(rs=paragraph){|para|
