@@ -23,7 +23,7 @@ class MyTest < Minitest::Test
       assert last_response.ok?
     }
 
-    cnp = ls("#{INTERNAL}/#{ARTICLE}/cnp/")
+    cnp = ls("#{INTERNAL}/cnp/")
     cnp.each {|x|
       get "/cnp/#{x}"
       assert last_response.ok?
