@@ -16,7 +16,7 @@ get '/' do
   @cnp = ls("#{INTERNAL}/cnp/")
   @operations = ls("#{INTERNAL}/operations/") + ls("#{DATAS}")
   @vmcores = ls("#{INTERNAL}/vmcores/")
-  @memo = read_internal("#{INTERNAL}/memo/")
+  @memo = read_internal("memo", "memo")
 
 
   haml :index
