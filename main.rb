@@ -6,7 +6,7 @@ require 'csv'
 require './helper.rb'
 
 
-# read article
+# read internal
 def read_internal(subdir, name)
     return File.read("#{INTERNAL}/#{subdir}/#{name}")
 end
@@ -23,13 +23,13 @@ get '/' do
 end
 
 # copy and paste
-get '/cnp/:name' do
+get '/cnp/cnp1/:name' do
   @name = params['name']
   content = "==========\n"
   paragraph = "----------\n"
 
   @ary = Array.new
-  File.open("#{INTERNAL}/cnp/#{@name}"){|f|
+  File.open("#{INTERNAL}/cnp/cnp1/#{@name}"){|f|
     f.each_line(rs=content){|cont|
       tmp = Array.new
       cont.chomp(rs=content).each_line(rs=paragraph){|para|
