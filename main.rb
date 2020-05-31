@@ -47,7 +47,7 @@ get '/:name' do
     @csv = CSV.read("#{DATAS}/closedcase", headers: false)
     haml :closedcase
   else
-    @operations = read_operations("operations", @name)
+    @internal = read_internal("operations", @name)
     haml :default
   end
 end
