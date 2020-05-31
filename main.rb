@@ -23,21 +23,12 @@ get '/' do
 end
 
 # cnp1
-get '/cnp/cnp1/:name' do
-  @name = params['name']
-  paragraph = "----------\n"
+get '/cnp/cnp1/:name'do
+@name = params['name']
+@cnp = read_cnp("cnp1", @name)
 
-  @ary = Array.new
-  File.open("#{INTERNAL}/cnp/cnp1/#{@name}"){|f|
-    f.each_line(rs=content){|cont|
-      tmp = Array.new
-      cont.chomp(rs=content).each_line(rs=paragraph){|para|
-        tmp.push(para.chomp(rs=paragraph))
-      }
-      @ary.push(tmp)
-    }
-  }
-  haml :cnp
+haml :cnp
+
 end
 
 
