@@ -25,7 +25,6 @@ end
 # cnp1
 get '/cnp/cnp1/:name' do
   @name = params['name']
-  content = "==========\n"
   paragraph = "----------\n"
 
   @ary = Array.new
@@ -40,27 +39,9 @@ get '/cnp/cnp1/:name' do
   }
   haml :cnp
 end
-#cnp2
-get '/cnp/cnp2/:name' do
-  @name = params['name']
-  content = "==========\n"
-  paragraph = "----------\n"
-
-  @ary = Array.new
-  File.open("#{INTERNAL}/cnp/cnp2/#{@name}"){|f|
-    f.each_line(rs=content){|cont|
-      tmp = Array.new
-      cont.chomp(rs=content).each_line(rs=paragraph){|para|
-        tmp.push(para.chomp(rs=paragraph))
-      }
-      @ary.push(tmp)
-    }
-  }
-  haml :cnp
-end
 
 
-# tools
+# operations
 get '/:name' do
   @name = params['name']
   if @name == "closedcase" then
