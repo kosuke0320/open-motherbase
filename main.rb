@@ -31,6 +31,14 @@ haml :cnp
 
 end
 
+# cnp2
+get '/cnp/cnp2/:name'do
+@name = params['name']
+@cnp = read_cnp("cnp2", @name)
+
+haml :cnp
+
+end
 
 # operations
 get '/:name' do
