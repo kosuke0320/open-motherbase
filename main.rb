@@ -23,21 +23,27 @@ get '/' do
 end
 
 # cnp1
-get '/cnp1/:name'do
-@name = params['name']
-@internal = read_internal("cnp1", @name)
-
-haml :cnp
-
+get '/:name' do
+  @name = params['name']
+  if @name == "closedcase" then
+    @csv = CSV.read("#{DATAS}/closedcase", headers: false)
+    haml :closedcase
+  else
+    @internal = read_internal("cnp1", @name)
+    haml :default
+  end
 end
 
 # cnp2
-get '/cnp2/:name'do
-@name = params['name']
-@internal = read_internal("cnp2", @name)
-
-haml :cnp
-
+get '/:name' do
+  @name = params['name']
+  if @name == "closedcase" then
+    @csv = CSV.read("#{DATAS}/closedcase", headers: false)
+    haml :closedcase
+  else
+    @internal = read_internal("cnp2", @name)
+    haml :default
+  end
 end
 
 # operations
