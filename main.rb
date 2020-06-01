@@ -25,23 +25,14 @@ end
 # cnp1
 get '/:name' do
   @name = params['name']
-  if @name == "closedcase" then
-    @csv = CSV.read("#{DATAS}/closedcase", headers: false)
-    haml :closedcase
-  else
-    @cnp = read_cnp("cnp1", @name)
+    @cnp = read_cnp("#{CNP}/cnp1", @name)
     haml :cnp
   end
 end
 
 # cnp2
 get '/:name' do
-  @name = params['name']
-  if @name == "closedcase" then
-    @csv = CSV.read("#{DATAS}/closedcase", headers: false)
-    haml :closedcase
-  else
-    @cnp = read_cnp("cnp2", @name)
+    @cnp = read_cnp("#{CNP}/cnp2", @name)
     haml :cnp
   end
 end
