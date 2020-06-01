@@ -29,7 +29,7 @@ get '/:name' do
     @csv = CSV.read("#{DATAS}/closedcase", headers: false)
     haml :closedcase
   else
-    @internal = read_internal("cnp1", @name)
+    @cnp = read_cnp("cnp1", @name)
     haml :cnp
   end
 end
@@ -41,7 +41,7 @@ get '/:name' do
     @csv = CSV.read("#{DATAS}/closedcase", headers: false)
     haml :closedcase
   else
-    @internal = read_internal("cnp2", @name)
+    @cnp = read_cnp("cnp2", @name)
     haml :cnp
   end
 end
