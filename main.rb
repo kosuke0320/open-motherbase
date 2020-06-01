@@ -30,7 +30,7 @@ get '/:name' do
     haml :closedcase
   else
     @internal = read_internal("cnp1", @name)
-    haml :default
+    haml :cnp
   end
 end
 
@@ -42,7 +42,7 @@ get '/:name' do
     haml :closedcase
   else
     @internal = read_internal("cnp2", @name)
-    haml :default
+    haml :cnp
   end
 end
 
