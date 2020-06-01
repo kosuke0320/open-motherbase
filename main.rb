@@ -34,7 +34,7 @@ end
 # cnp2
 get '/cnp/cnp2/:name'do
 @name = params['name']
-@internal = read_internal("cnp2", @name)
+@cnp = read_cnp("cnp2", @name)
 
 haml :cnp
 
