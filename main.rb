@@ -25,18 +25,16 @@ end
 # cnp1
 get '/:name' do
   @name = params['name']
-    @internal = read_internal("#{CNP}/cnp1", @name)
+    @internal = read_internal("cnp1", @name)
     haml :cnp
   end
-end
 
 # cnp2
 get '/:name' do
   @name = params['name']
-    @internal = read_internal("#{CNP}/cnp2", @name)
+    @internal = read_internal("cnp2", @name)
     haml :cnp
   end
-end
 
 # operations
 get '/:name' do
