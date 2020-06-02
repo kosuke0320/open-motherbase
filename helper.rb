@@ -3,7 +3,7 @@
 INTERNAL = "./internal/"
 OPERATIONS = "#{INTERNAL}/operations/"
 DATAS = "#{INTERNAL}/data/"
-CNP = "#{INTERNAL}/cnp/"
+
 
 # ls(path) returns all file's name in 'path'
 def ls(path)
