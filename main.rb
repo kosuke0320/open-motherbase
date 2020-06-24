@@ -23,14 +23,14 @@ get '/' do
 end
 
 # cnp1
-get '/cnp1/:name' do
+get '/cnp/:name' do
   @name = ls(":name")
     @internal = read_internal("cnp", @name)
     haml :cnp
   end
 
 # cnp2
-get '/cnp2/:name' do
+get '/cnp/:name' do
   @name = ls(":name")
     @internal = read_internal("cnp", @name)
     haml :cnp
